@@ -1,5 +1,5 @@
 bundle:
-  name: wikimedia_analysis_dab_demo_2
+  name: dab_demo_git_actions
 
 include:
   - resources/*.yml
