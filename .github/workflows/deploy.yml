@@ -23,7 +23,7 @@ jobs:
       - name: Deploy Bundle
         env:
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
-          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_AZURE_TENANT_ID }}
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
         run: |
           databricks bundle validate -t dev
           databricks bundle deploy -t dev
