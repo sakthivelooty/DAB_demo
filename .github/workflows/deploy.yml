@@ -27,3 +27,11 @@ jobs:
         run: |
           databricks bundle validate -t dev
           databricks bundle deploy -t dev
+
+      - name: Deploy Bundle prod
+        env:
+          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+        run: |
+          databricks bundle validate -t prod
+          databricks bundle deploy -t prod
